@@ -1,36 +1,38 @@
 {
-    "name": "Kubernetes Fundamentals Training Labs",
-    "image": "quay.io/kubermatic-labs/devcontainers:kubernetes-fundamentals-for-ops-c152609",
-    "customizations": {
-      "vscode": {
-        "settings": {
-          "workbench.editorAssociations": {
-            "*.md": "vscode.markdown.preview.editor"
-          },
-          "files.exclude": {
-            ".git/": true,
-            ".github/": true,
-            ".devcontainer/": true
-          }
+  "name": "Kubernetes Fundamentals For Operators Training Labs",
+  "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu-22.04",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "workbench.editorAssociations": {
+          "*.md": "vscode.markdown.preview.editor"
+        },
+        "files.exclude": {
+          ".git/": true,
+          ".github/": true,
+          ".devcontainer/": true
         }
       }
-    },
-    "features": {
-      "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
-        "enableNonRootDocker": "true",
-        "moby": "true"
-      }
-    },
-    "remoteUser": "root",
-    "privileged": true,
-    "cappAdd": ["ALL"],
-    "runArgs": [
-      "--network=host",
-      "--cgroupns=host"
-    ],
-    "forwardPorts": [
-      8080,
-      80,
-      443
-    ]
+    }
+  },
+  // "features": {
+  //   "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
+  //     "enableNonRootDocker": "true",
+  //     "moby": "true"
+  //   }
+  // },
+  // "remoteUser": "root",
+  // "privileged": true,
+  // "cappAdd": [
+  //   "ALL"
+  // ],
+  // "runArgs": [
+  //   "--network=host",
+  //   "--cgroupns=host"
+  // ],
+  // "forwardPorts": [
+  //   8080,
+  //   80,
+  //   443
+  // ]
 }
