@@ -1,6 +1,6 @@
 {
   "name": "Kubernetes Fundamentals For Operators Training Labs",
-  "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu-22.04",
+  "image": "quay.io/kubermatic-labs/training-ghcs-trainee-environment:1.0.0",
   "customizations": {
     "vscode": {
       "settings": {
@@ -10,29 +10,10 @@
         "files.exclude": {
           ".git/": true,
           ".github/": true,
-          ".devcontainer/": true
+          ".devcontainer/": true,
+          ".99_todos/": true
         }
       }
     }
-  },
-  // "features": {
-  //   "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
-  //     "enableNonRootDocker": "true",
-  //     "moby": "true"
-  //   }
-  // },
-  // "remoteUser": "root",
-  // "privileged": true,
-  // "cappAdd": [
-  //   "ALL"
-  // ],
-  // "runArgs": [
-  //   "--network=host",
-  //   "--cgroupns=host"
-  // ],
-  // "forwardPorts": [
-  //   8080,
-  //   80,
-  //   443
-  // ]
+  }
 }
