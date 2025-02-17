@@ -11,7 +11,7 @@ public=$(public_ip)
 for i in 0 1 2; do
   # only the first master node gets a static ip
   [ $i = 0 ] && addr_arg="--address $public" || addr_arg=""
-  gcloud compute instances create master-${i} \
+  gcloud compute instances create $PREFIX-master-${i} \
     --async \
     --boot-disk-size 200GB \
     --can-ip-forward \
@@ -20,13 +20,13 @@ for i in 0 1 2; do
     --machine-type n1-standard-2 \
     --private-network-ip 10.254.254.10$i \
     --scopes compute-rw,storage-ro,service-management,service-control,logging-write,monitoring \
-    --subnet magicless-subnet \
-    --tags magicless,master $addr_arg
+    --subnet $PREFIX-magicless-subnet \
+    --tags magicless,$PREFIX-master $addr_arg
 done
 
 # create the worker nodes
 for i in 0 1 2; do
-  gcloud compute instances create worker-${i} \
+  gcloud compute instances create $PREFIX-worker-${i} \
     --async \
     --boot-disk-size 200GB \
     --can-ip-forward \
@@ -36,8 +36,8 @@ for i in 0 1 2; do
     --metadata pod-cidr=192.168.1${i}.0/24 \
     --private-network-ip 10.254.254.20${i} \
     --scopes compute-rw,storage-ro,service-management,service-control,logging-write,monitoring \
-    --subnet magicless-subnet \
-    --tags magicless,worker
+    --subnet $PREFIX-magicless-subnet \
+    --tags magicless,$PREFIX-worker
 done
 
 gcloud compute instances list

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -euxo pipefail
+# set -euxo pipefail
 
 source ~/.trainingrc
 source ./000_func.sh

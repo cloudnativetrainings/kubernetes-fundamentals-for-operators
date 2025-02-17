@@ -1,4 +1,3 @@
-#!/bin/sh
 
 node_sans() {
   node="$1";shift
@@ -10,7 +9,7 @@ node_sans() {
 }
 
 public_ip() {
-  gcloud compute addresses describe magicless-ip-address \
+  gcloud compute addresses describe $PREFIX-magicless-ip-address \
     --region $(gcloud config get-value compute/region) \
     --format 'value(address)'
 }
