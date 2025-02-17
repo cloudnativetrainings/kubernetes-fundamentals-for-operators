@@ -1,8 +1,11 @@
 .PHONY verify:
 verify:
-	gcloud config configurations describe default
 	cfssl version
 	cfssljson --version
+	kubectl version --client
+	gcloud config configurations describe default
+	vim --version
+	tmux -V
 	test -n "$(ETCD_VERSION)"
 	test -n "$(KUBERNETES_VERSION)"
 	test -n "$(RUNC_VERSION)"
