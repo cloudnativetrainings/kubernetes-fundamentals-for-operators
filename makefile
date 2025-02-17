@@ -1,21 +1,15 @@
-export ETCD_VERSION=3.5.8
-export KUBERNETES_VERSION=1.28.9
-export RUNC_VERSION=1.1.12
-export CONTAINERD_VERSION=1.7.16
-export CRICTL_VERSION=1.30.0
-export CNI_PLUGINS_VERSION=1.4.1
-
-.PHONY setup:
-setup:
-	./setup_trainingrc_file.sh
-	./setup_trainingrc_file_nodes.sh
-	go install github.com/cloudflare/cfssl/cmd/{cfssl,cfssljson}@v1.6.5
-
 .PHONY verify:
 verify:
+	gcloud config configurations describe default
 	cfssl version
 	cfssljson --version
-	gcloud --version
+	test -n "$(ETCD_VERSION)
+	test -n "$(KUBERNETES_VERSION)
+	test -n "$(RUNC_VERSION)
+	test -n "$(CONTAINERD_VERSION)
+	test -n "$(CRICTL_VERSION)
+	test -n "$(CNI_PLUGINS_VERSION)
+	test -n "$(PREFIX)"
 	echo "Training Environment successfully verified"
 
 # TODO
