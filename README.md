@@ -13,8 +13,8 @@ gcloud config set compute/zone europe-west3-a
 
 # TODO force bash only in codespaces
 
-# TODO ssh-private-key
-ssh-keygen -q
+# create a ssh-key-pair for gcloud
+ssh-keygen -q -N "" -t rsa -f ~/.ssh/google_compute_engine -C vscode
 
 # adapt bash environment
 echo "export PREFIX=<TRAINEE_NAME>" >> .trainingrc

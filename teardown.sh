@@ -1,6 +1,7 @@
 #!/bin/bash
 
-set -euxo pipefail
+# TODO
+# set -euxo pipefail
 
 # machines
 gcloud -q compute instances delete \

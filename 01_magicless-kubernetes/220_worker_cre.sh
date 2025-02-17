@@ -2,7 +2,8 @@
 
 # this is meant to be run on each worker node
 
-set -euxo pipefail
+# TODO
+# set -euxo pipefail
 
 source ~/.trainingrc
 

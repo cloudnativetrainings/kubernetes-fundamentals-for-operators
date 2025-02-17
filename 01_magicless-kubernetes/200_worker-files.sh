@@ -1,17 +1,17 @@
 #!/bin/bash
 
-set -euxo pipefail
+# set -euxo pipefail
 
 source ~/.trainingrc
 
 # copy secrets
 for node in worker-{0..2}; do
-  gcloud compute scp secrets/${node}.pem \
-                     secrets/${node}-key.pem \
-                     secrets/${node}.kubeconfig \
+  gcloud compute scp secrets/$PREFIX-${node}.pem \
+                     secrets/$PREFIX-${node}-key.pem \
+                     secrets/$PREFIX-${node}.kubeconfig \
                      secrets/kube-proxy.kubeconfig \
                      secrets/ca.pem \
-                     ${node}:
+                     $PREFIX-${node}:
 done                     
 
 # copy config files
@@ -25,15 +25,15 @@ for node in worker-{0..2}; do
                      services/containerd.service \
                      services/kube-proxy.service \
                      services/kubelet.service \
-                     ${node}:
+                     $PREFIX-${node}:
 done
 
 # copy shell scripts
 for node in worker-{0..2}; do
-  gcloud compute scp 2*.sh ${node}:
+  gcloud compute scp 2*.sh $PREFIX-${node}:
 done
 
 # copy .trainingrc file
 for node in worker-{0..2}; do
-    gcloud compute scp ~/.node_trainingrc ${node}:~/.trainingrc
+    gcloud compute scp ~/.trainingrc $PREFIX-${node}:~/.trainingrc
 done

@@ -16,8 +16,8 @@ verify:
 	echo "Training Environment successfully verified"
 
 # TODO
-# .PHONY teardown:
-# teardown:
+.PHONY teardown:
+teardown:
 # 	./teardown.sh
 	rm -rf secrets/*.pem
 	rm -rf secrets/*.csr
