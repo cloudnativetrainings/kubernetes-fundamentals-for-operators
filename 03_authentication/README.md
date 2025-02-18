@@ -8,7 +8,7 @@ In the training, we will learn about create authentication configuration using C
 
 ```bash
 # configure kubectl for being allowed to talk to the kubernetes cluster
-export KUBECONFIG=$HOME/trainings/kubernetes_fundamentals_for_operators/01_magicless-kubernetes/secrets/admin.kubeconfig
+export KUBECONFIG=/workspaces/kubernetes-fundamentals-for-operators/01_magicless-kubernetes/secrets/admin.kubeconfig
 ```
 
 ## Create the CSR
@@ -18,7 +18,7 @@ export KUBECONFIG=$HOME/trainings/kubernetes_fundamentals_for_operators/01_magic
 openssl genrsa -out bob.key 2048
 
 # create the CSR
-openssl req -new -key bob.key -out bob.csr -subj "/CN=bob/O=eng"\n
+openssl req -new -key bob.key -out bob.csr -subj "/CN=bob/O=eng"
 
 # copy the content of the CSR into an environment variable
 export CSR=$(cat bob.csr | base64 | tr -d '\n')

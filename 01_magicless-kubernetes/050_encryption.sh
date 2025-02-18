@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# TODO
-#  set -euxo pipefail
-
 source ~/.trainingrc
 
 ENCRYPTION_KEY=$(head -c 32 /dev/urandom | base64)

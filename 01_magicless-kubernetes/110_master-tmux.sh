@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# TODO
-# set -euxo pipefail
-
 source ~/.trainingrc
 
 tmux new-session -d -s magicless-master

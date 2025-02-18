@@ -8,7 +8,7 @@ In this training, you will learn about Pods which will not get restarted.
 
 ```bash
 # configure kubectl for being allowed to talk to the kubernetes cluster
-export KUBECONFIG=$HOME/trainings/kubernetes_fundamentals_for_operators/01_magicless-kubernetes/secrets/admin.kubeconfig
+export KUBECONFIG=/workspaces/kubernetes-fundamentals-for-operators/01_magicless-kubernetes/secrets/admin.kubeconfig
 ```
 
 ## Setup the workloads
@@ -46,10 +46,10 @@ kubectl get pods
 kubectl get nodes
 
 # try to drain the nodes, note that this will not work due to the manualy created pod
-kubectl drain worker-0 worker-1 worker-2
+kubectl drain $PREFIX-worker-0 $PREFIX-worker-1 $PREFIX-worker-2
 
 # force draining the noces
-kubectl drain worker-0 worker-1 worker-2 --force
+kubectl drain $PREFIX-worker-0 $PREFIX-worker-1 $PREFIX-worker-2 --force
 
 # check the state of the nodes
 kubectl get nodes
@@ -62,7 +62,7 @@ kubectl get pods
 
 ```bash
 # uncordon the worker nodes
-kubectl uncordon worker-0 worker-1 worker-2
+kubectl uncordon $PREFIX-worker-0 $PREFIX-worker-1 $PREFIX-worker-2
 
 # verify worker nodes state
 kubectl get nodes
@@ -79,5 +79,5 @@ kubectl get pods
 ## Teardown
 
 ```bash
-kubectl delete all --all --force --grace-period=0
+kubectl delete -f . --force --grace-period=0
 ```

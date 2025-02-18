@@ -9,9 +9,6 @@ gcloud auth activate-service-account --key-file=./gcloud-service-account.json
 gcloud config set project <PROJECT_ID>
 gcloud config set compute/region europe-west3
 gcloud config set compute/zone europe-west3-a
-# TODO can I set this on creating the projects via terraform?
-
-# TODO force bash only in codespaces
 
 # create a ssh-key-pair for gcloud
 ssh-keygen -q -N "" -t rsa -f ~/.ssh/google_compute_engine -C vscode

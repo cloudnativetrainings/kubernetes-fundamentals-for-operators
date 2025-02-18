@@ -1,11 +1,5 @@
 #!/bin/bash
 
-### NOTE!!!
-# on gcloud shell, disable tmux!!! 
-
-# TODO
-set -euxo pipefail
-
 source ~/.trainingrc
 
 tmux new-session -d -s magicless-worker

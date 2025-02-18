@@ -2,9 +2,6 @@
 
 # this is meant to be run on each worker node
 
-# TODO
-# set -euxo pipefail
-
 source ~/.trainingrc
 
 # create folders

@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# set -euxo pipefail
-
 source ~/.trainingrc
 
 # copy secrets

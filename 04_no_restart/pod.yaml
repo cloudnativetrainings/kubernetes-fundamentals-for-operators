@@ -3,8 +3,6 @@ kind: Pod
 metadata:
   name: my-pod
 spec:
-  terminationGracePeriodSeconds: 12
   containers:
-    - name: seven-sins-application
-      image: quay.io/kubermatic-labs/seven-sins-application:0.0.3
-      imagePullPolicy: Always
+    - name: my-nginx-pod
+      image: nginx

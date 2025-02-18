@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# TODO
-# set -euxo pipefail
-
 source ~/.trainingrc
 
 for x in {0..2}; do

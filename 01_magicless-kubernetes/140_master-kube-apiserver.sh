@@ -2,9 +2,6 @@
 
 # this is meant to be run on each master node
 
-# TODO
-# set -euxo pipefail
-
 source ~/.trainingrc
 
 # create kube-apiserver service file

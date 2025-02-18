@@ -6,7 +6,7 @@ In this lab you will learn how to work with etcd.
 
 ```bash
 # connect to one of the master nodes, on which etcdctl is installed
-gcloud compute ssh master-0
+gcloud compute ssh $PREFIX-master-0
 
 # export the etcd environment variables for having more convenience
 export ETCDCTL_API=3
@@ -22,6 +22,9 @@ export KUBECONFIG=~/admin.kubeconfig
 ## Verify setup
 
 ```bash
+# verify etcdctl is installed
+etcdctl version
+
 # verify communication to etcd via etcdctl
 etcdctl member list
 

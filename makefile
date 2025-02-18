@@ -15,10 +15,9 @@ verify:
 	test -n "$(PREFIX)"
 	echo "Training Environment successfully verified"
 
-# TODO
 .PHONY teardown:
 teardown:
-# 	./teardown.sh
+	./teardown.sh
 	rm -rf secrets/*.pem
 	rm -rf secrets/*.csr
 	rm -rf secrets/*.kubeconfig
