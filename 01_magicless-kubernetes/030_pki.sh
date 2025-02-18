@@ -41,9 +41,9 @@ EOF
 mkcert admin admin system:masters ""
 
 # worker nodes
-mkcert system:node:worker-0 worker-0 system:nodes $( node_sans $PREFIX-worker-0 )
-mkcert system:node:worker-1 worker-1 system:nodes $( node_sans $PREFIX-worker-1 )
-mkcert system:node:worker-2 worker-2 system:nodes $( node_sans $PREFIX-worker-2 )
+mkcert system:node:$PREFIX-worker-0 $PREFIX-worker-0 system:nodes $( node_sans $PREFIX-worker-0 )
+mkcert system:node:$PREFIX-worker-1 $PREFIX-worker-1 system:nodes $( node_sans $PREFIX-worker-1 )
+mkcert system:node:$PREFIX-worker-2 $PREFIX-worker-2 system:nodes $( node_sans $PREFIX-worker-2 )
 
 # master components
 mkcert system:kube-controller-manager kube-controller-manager system:kube-controller-manager ""

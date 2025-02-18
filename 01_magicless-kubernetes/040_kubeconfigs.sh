@@ -28,9 +28,9 @@ mkkubecfg() {
 }
 
 # worker kubeconfs:
-mkkubecfg worker-0.kubeconfig system:node:worker-0 worker-0
-mkkubecfg worker-1.kubeconfig system:node:worker-1 worker-1
-mkkubecfg worker-2.kubeconfig system:node:worker-2 worker-2
+mkkubecfg $PREFIX-worker-0.kubeconfig system:node:$PREFIX-worker-0 $PREFIX-worker-0
+mkkubecfg $PREFIX-worker-1.kubeconfig system:node:$PREFIX-worker-1 $PREFIX-worker-1
+mkkubecfg $PREFIX-worker-2.kubeconfig system:node:$PREFIX-worker-2 $PREFIX-worker-2
 
 # kube-proxy, kube-controller-manager, kube-scheduler
 mkkubecfg kube-proxy.kubeconfig system:kube-proxy kube-proxy

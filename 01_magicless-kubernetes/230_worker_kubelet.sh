@@ -17,9 +17,9 @@ sudo install -o root -m 0755 kubelet /usr/local/bin/
 
 # copy secrets
 sudo install -o root -m 0644 ca.pem /var/lib/kubelet/ca.pem
-sudo install -o root -m 0644 ${PREFIX}-${HOSTNAME}.pem /var/lib/kubelet/kubelet.pem
-sudo install -o root -m 0600 ${PREFIX}-${HOSTNAME}-key.pem /var/lib/kubelet/kubelet-key.pem
-sudo install -o root -m 0600 ${PREFIX}-${HOSTNAME}.kubeconfig /var/lib/kubelet/kubeconfig
+sudo install -o root -m 0644 ${HOSTNAME}.pem /var/lib/kubelet/kubelet.pem
+sudo install -o root -m 0600 ${HOSTNAME}-key.pem /var/lib/kubelet/kubelet-key.pem
+sudo install -o root -m 0600 ${HOSTNAME}.kubeconfig /var/lib/kubelet/kubeconfig
 
 # create kubelet config file
 export POD_CIDR=$(curl -s -H "Metadata-Flavor: Google" \
