@@ -11,7 +11,7 @@ gcloud config set compute/region europe-west3
 gcloud config set compute/zone europe-west3-a
 
 # create a ssh-key-pair for gcloud
-ssh-keygen -q -N "" -t rsa -f ~/.ssh/google_compute_engine -C vscode
+ssh-keygen -q -N "" -t rsa -f ~/.ssh/google_compute_engine -C root
 
 # adapt bash environment
 echo "export PREFIX=<TRAINEE_NAME>" >> .trainingrc
