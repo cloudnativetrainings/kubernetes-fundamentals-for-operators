@@ -1,6 +1,6 @@
 {
   "name": "Kubernetes Fundamentals For Operators Training Labs",
-  "image": "quay.io/kubermatic-labs/training-ghcs-kubernetes-fundamentals-for-operators-trainee-environment:1.0.5",
+  "image": "quay.io/kubermatic-labs/training-ghcs-kubernetes-fundamentals-for-operators-trainee-environment:1.0.6",
   "customizations": {
     "vscode": {
       "settings": {
@@ -10,9 +10,11 @@
         "terminal.integrated.shell.linux": "/bin/bash",
         "files.exclude": {
           ".git/": true,
-          ".github/": true,
+          ".gititnore": true,
           ".devcontainer/": true,
-          ".99_todos/": true
+          ".99_todos/": true,
+          "teardown.sh": true,
+          "makefile": true
         }
       }
     }

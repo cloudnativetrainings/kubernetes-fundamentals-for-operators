@@ -15,9 +15,8 @@ ssh-keygen -q -N "" -t rsa -f ~/.ssh/google_compute_engine -C root
 
 # adapt bash environment
 echo "export PREFIX=<TRAINEE_NAME>" >> .trainingrc
-mv .trainingrc ~
-source ~/.trainingrc
-echo "source ~/.trainingrc" >> ~/.bashrc
+mv -f .trainingrc /root/.trainingrc
+source /root/.trainingrc
 
 # verify training environment
 make verify
