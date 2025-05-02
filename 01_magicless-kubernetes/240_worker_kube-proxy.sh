@@ -2,7 +2,7 @@
 
 # this is meant to be run on each worker node
 
-source ~/.trainingrc
+source /root/.trainingrc
 
 # create folders
 sudo mkdir -p /var/lib/kube-proxy/

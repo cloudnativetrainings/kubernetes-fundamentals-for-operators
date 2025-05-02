@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ~/.trainingrc
+source /root/.trainingrc
 source ./000_func.sh
 
 cfssl gencert -initca secrets/ca-csr.json | cfssljson -bare secrets/ca

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ~/.trainingrc
+source /root/.trainingrc
 
 export KUBECONFIG=secrets/admin.kubeconfig
 

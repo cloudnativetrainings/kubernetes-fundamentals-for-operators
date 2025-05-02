@@ -2,7 +2,7 @@
 
 # this is meant to be run on each master node
 
-source ~/.trainingrc
+source /root/.trainingrc
 
 # create kube-apiserver service file
 sudo install -o root -m 0644 kube-controller-manager.service /etc/systemd/system/kube-controller-manager.service

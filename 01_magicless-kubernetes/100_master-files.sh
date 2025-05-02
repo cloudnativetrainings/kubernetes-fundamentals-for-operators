@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ~/.trainingrc
+source /root/.trainingrc
 
 # copy secrets
 for node in master-{0..2}; do
@@ -25,5 +25,5 @@ done
 
 # copy .trainingrc file
 for node in master-{0..2}; do
-  gcloud compute scp ~/.trainingrc $PREFIX-${node}:~/.trainingrc
+  gcloud compute scp /root/.trainingrc $PREFIX-${node}:/root/.trainingrc
 done

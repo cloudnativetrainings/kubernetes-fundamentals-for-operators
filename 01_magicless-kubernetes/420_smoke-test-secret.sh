@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ~/.trainingrc
+source /root/.trainingrc
 
 kubectl --kubeconfig secrets/admin.kubeconfig create secret generic "magicless" \
   --from-literal="mykey=mydata"

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ~/.trainingrc
+source /root/.trainingrc
 
 ENCRYPTION_KEY=$(head -c 32 /dev/urandom | base64)
 cat > secrets/encryption-config.yaml <<EOF

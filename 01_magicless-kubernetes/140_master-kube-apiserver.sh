@@ -2,7 +2,7 @@
 
 # this is meant to be run on each master node
 
-source ~/.trainingrc
+source /root/.trainingrc
 
 # create kube-apiserver service file
 export INTERNAL_IP=$( curl -s -H "Metadata-Flavor: Google" \

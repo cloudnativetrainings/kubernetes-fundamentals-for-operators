@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ~/.trainingrc
+source /root/.trainingrc
 
 # create the vpc
 gcloud compute networks create $PREFIX-magicless-vpc --subnet-mode custom

@@ -14,8 +14,14 @@ gcloud config set compute/zone europe-west3-a
 ssh-keygen -q -N "" -t rsa -f ~/.ssh/google_compute_engine -C root
 
 # adapt bash environment
+echo "export ETCD_VERSION=3.5.8" >> /root/.trainingrc
+echo "export KUBERNETES_VERSION=1.28.9" >> /root/.trainingrc
+echo "export RUNC_VERSION=1.1.12" >> /root/.trainingrc
+echo "export CONTAINERD_VERSION=1.7.16" >> /root/.trainingrc
+echo "export CRICTL_VERSION=1.30.0" >> /root/.trainingrc
+echo "export CNI_PLUGINS_VERSION=1.4.1" >> /root/.trainingrc
+
 echo "export PREFIX=<TRAINEE_NAME>" >> .trainingrc
-mv -f .trainingrc /root/.trainingrc
 source /root/.trainingrc
 
 # verify training environment

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ~/.trainingrc
+source /root/.trainingrc
 
 for x in {0..2}; do
   gcloud compute routes create $PREFIX-k8s-pod-route-192-168-1${x}-0-24 \

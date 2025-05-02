@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ~/.trainingrc
+source /root/.trainingrc
 
 tmux new-session -d -s magicless-master
 tmux split-window -t magicless-master:0.0
