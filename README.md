@@ -21,7 +21,7 @@ echo "export CONTAINERD_VERSION=1.7.16" >> /root/.trainingrc
 echo "export CRICTL_VERSION=1.30.0" >> /root/.trainingrc
 echo "export CNI_PLUGINS_VERSION=1.4.1" >> /root/.trainingrc
 
-echo "export PREFIX=<TRAINEE_NAME>" >> .trainingrc
+echo "export PREFIX=<TRAINEE_NAME>" >> /root/.trainingrc
 source /root/.trainingrc
 
 # verify training environment
