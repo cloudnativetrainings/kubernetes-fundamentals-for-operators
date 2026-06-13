@@ -1,6 +1,6 @@
 # Magicless Kubernetes
 
-In this lab you will setup a Kubernetes Cluster from scratch, without any help from tools like kubeadm, kubeone or others.
+In this lab you will set up a Kubernetes Cluster from scratch, without any help from tools like kubeadm, kubeone or others.
 
 ## Setting up the HA Cluster
 
@@ -53,7 +53,7 @@ Copy the needed configs and sensitive data to the 3 VM instances.
 
 #### Switch to master nodes via Tmux
 
-Make use of Tmux for making changes on the 3 VMs
+Make use of Tmux for making changes on the 3 VMs.
 
 #### Create Etcd Cluster
 
@@ -77,11 +77,11 @@ Install and start the kube-scheduler.
 
 #### Ensure communication between kube-apiserver services and kubelets
 
-Configure Kubernetes for enabling communication from the api-server to the kubelets via RBAC.
+Configure Kubernetes to enable communication from the api-server to the kubelets via RBAC.
 
 ### Create the worker nodes
 
-Create 3 the Worker Nodes.
+Create the 3 Worker Nodes.
 
 #### Copy the needed files to the worker nodes
 
@@ -89,11 +89,11 @@ Copy the needed configs and sensitive data to the 3 VM instances.
 
 #### Switch to worker nodes via Tmux
 
-Make use of Tmux for making changes on the 3 VMs
+Make use of Tmux for making changes on the 3 VMs.
 
 #### Create the containerd services
 
-Install and start the containerd.
+Install and start containerd.
 
 #### Create the kubelet services
 
@@ -101,7 +101,7 @@ Install and start the kubelets.
 
 #### Create the kube-proxy services
 
-Install and start the kube-proxys.
+Install and start kube-proxy.
 
 #### Configure CNI-Plugins
 

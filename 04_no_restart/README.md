@@ -2,7 +2,7 @@
 
 In this training, you will learn about Pods which will not get restarted.
 
-> Navigate to the folder `04_no_restart` from CLI, before you get started.
+> Navigate to the folder `04_no_restart` from the CLI before you get started.
 
 ## Setup Environment
 
@@ -24,7 +24,7 @@ kubectl create -f pod.yaml
 
 ### Inspect and create the Deployment
 
-Inspect pod.yaml definition file and create the pod
+Inspect deployment.yaml definition file and create the deployment
 
 ```bash
 cat deployment.yaml

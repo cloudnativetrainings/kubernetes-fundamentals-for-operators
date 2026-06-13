@@ -1,8 +1,8 @@
 # Authentication
 
-In the training, we will learn about create authentication configuration using CSR, certificate and kubeconfig for a user to grant access over specific k8s cluster.
+In the training, we will learn how to create an authentication configuration using a CSR, certificate, and kubeconfig to grant a user access to a specific k8s cluster.
 
-> Navigate to the folder `03_authentication` from CLI, before you get started.
+> Navigate to the folder `03_authentication` from the CLI before you get started.
 
 ## Setup Environment
 
