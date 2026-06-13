@@ -9,7 +9,7 @@ sudo mkdir -p /var/lib/kubelet/
 
 # download and install binary
 wget -q --show-progress --https-only --timestamping \
-  "https://storage.googleapis.com/kubernetes-release/release/v${KUBERNETES_VERSION}/bin/linux/amd64/kubelet"
+  "https://dl.k8s.io/release/v${KUBERNETES_VERSION}/bin/linux/amd64/kubelet"
 sudo install -o root -m 0755 kubelet /usr/local/bin/
 
 # copy secrets

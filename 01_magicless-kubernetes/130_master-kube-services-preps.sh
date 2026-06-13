@@ -9,10 +9,10 @@ sudo mkdir -p /var/lib/kubernetes/
 
 # download binaries
 wget -q --show-progress --https-only --timestamping \
-  "https://storage.googleapis.com/kubernetes-release/release/v$KUBERNETES_VERSION/bin/linux/amd64/kube-apiserver" \
-  "https://storage.googleapis.com/kubernetes-release/release/v$KUBERNETES_VERSION/bin/linux/amd64/kube-controller-manager" \
-  "https://storage.googleapis.com/kubernetes-release/release/v$KUBERNETES_VERSION/bin/linux/amd64/kube-scheduler" \
-  "https://storage.googleapis.com/kubernetes-release/release/v$KUBERNETES_VERSION/bin/linux/amd64/kubectl"
+  "https://dl.k8s.io/release/v$KUBERNETES_VERSION/bin/linux/amd64/kube-apiserver" \
+  "https://dl.k8s.io/release/v$KUBERNETES_VERSION/bin/linux/amd64/kube-controller-manager" \
+  "https://dl.k8s.io/release/v$KUBERNETES_VERSION/bin/linux/amd64/kube-scheduler" \
+  "https://dl.k8s.io/release/v$KUBERNETES_VERSION/bin/linux/amd64/kubectl"
 
 # install binaries
 sudo install -o root -m 0755 kube{ctl,-apiserver,-controller-manager,-scheduler} /usr/local/bin/
